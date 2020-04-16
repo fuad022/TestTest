@@ -82,6 +82,9 @@ namespace test
             //int[] arr2 = arr[0..4]; //диапазон(особенность C#8).
             //int[] arr3 = arr[..4]; //диапазон с начала (особенность C#8).
             //int[] arr4 = arr[5..]; //диапазон с 5ти до конца (особенность C#8).
+
+            Console.WriteLine("ffff");
+            Console.WriteLine("aaaa");
             
             
         }
