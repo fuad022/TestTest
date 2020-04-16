@@ -6,7 +6,7 @@ namespace test
 {
     class Program
     {
-        //комментарий
+        //comment from github
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello");
