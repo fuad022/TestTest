@@ -2,6 +2,6 @@
 {
     public class TestClass
     {
-        
+        //some comment
     }
 }

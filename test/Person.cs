@@ -6,6 +6,7 @@ namespace test
 {
     public class Person
     {
+        //some comment
         private string _name;
 
         public void SetName(string name)

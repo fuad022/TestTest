@@ -96,11 +96,11 @@ namespace test
             //Безконечный цикл
             //for (;;) { }
             
-            var list = new List<int>();
+            /*var list = new List<int>();
             for (var i = 0; i < 0; i+=2)
             {
                 list.Add(i);
-            }
+            }*/
 
             
         }
