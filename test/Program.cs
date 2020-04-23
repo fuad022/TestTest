@@ -1,6 +1,8 @@
 ﻿//Пространсво имен.
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace test
 {
@@ -83,9 +85,23 @@ namespace test
             //int[] arr3 = arr[..4]; //диапазон с начала (особенность C#8).
             //int[] arr4 = arr[5..]; //диапазон с 5ти до конца (особенность C#8).
 
-            Console.WriteLine("ffff");
-            Console.WriteLine("aaaa");
+            //Console.WriteLine("ffff");
+            //Console.WriteLine("aaaa");
+
+
+            /*List<int> list = new List<int>();
+            list.Add(5);
+            Console.WriteLine(list.Count);*/
+
+            //Безконечный цикл
+            //for (;;) { }
             
+            var list = new List<int>();
+            for (var i = 0; i < 0; i+=2)
+            {
+                list.Add(i);
+            }
+
             
         }
     }
