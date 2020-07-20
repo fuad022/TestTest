@@ -7,15 +7,15 @@ namespace test
     public class Person
     {
         //some comment
-        private string _name;
+        public string Name { get; set; }
 
-        public void SetName(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentNullException("Nulls");
-            }
-            _name = name;
-        }
+        //public void SetName(string name)
+        //{
+        //    if (string.IsNullOrWhiteSpace(name))
+        //    {
+        //        throw new ArgumentNullException("Nulls");
+        //    }
+        //    _name = name;
+        //}
     }
 }

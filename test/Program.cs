@@ -2,15 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualBasic.CompilerServices;
+using System.IO;
+using System.Threading.Tasks;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System.Xml;
+using Microsoft.Extensions.Hosting;
 
 namespace test
 {
     class Program
     {
         //comment from github
-        static void Main(string[] args)
+        //static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            ////////////////////////////////////
             //Console.WriteLine("Hello");
             //Console.WriteLine("Hello1");
 
@@ -95,14 +103,124 @@ namespace test
 
             //Безконечный цикл
             //for (;;) { }
-            
+
             /*var list = new List<int>();
             for (var i = 0; i < 0; i+=2)
             {
                 list.Add(i);
             }*/
 
-            
+            ////////////////////////////////////////////////////////////////////////////
+            /// Перегрузка операторов(operator)
+            ////////////////////////////////////////////////////////////////////////////
+            /*
+            Apple apple = new Apple("Red apple", 100, 100);
+            Apple apple2 = new Apple("Green apple", 90, 110);
+
+            var sumApple = Apple.Add(apple, apple2);
+            var sumApple2 = apple + apple2;
+
+            var sumApple3 = apple + 100;
+
+            Console.WriteLine(apple);
+            Console.WriteLine(apple2);
+            Console.WriteLine(sumApple);
+            Console.WriteLine(sumApple2);
+            Console.WriteLine(sumApple3);
+
+            Console.WriteLine(apple == apple2);
+            Console.WriteLine(sumApple == sumApple2);
+
+            Console.ReadLine();*/
+            /////////////////////////////////////////////////////////////////////////////
+            /*
+            var p = new Product<int>("Apple", 100, 100);
+            var list = new List<int>();
+            var map = new Dictionary<string, string>();
+            map.Add("5", "Five");
+            map.Add("6", "Six");*/
+
+            /*var cars = new List<ICar>();
+            cars.Add(new Bmw());*/
+            //////////////////////////////////////////////////////////////////
+            /*
+            while (true)
+            {
+                var input = Console.ReadLine();
+
+                if (int.TryParse(input, out int result))
+                {
+                    Console.WriteLine($"Integer {result}");
+                    //break;
+                }
+                else
+                {
+                    Console.WriteLine("Uncorrect input");
+                }
+            }
+
+            var i = 5;
+            try
+            {
+                throw new MyOwnException();
+                //var j = i / 0;
+            }
+            catch (MyOwnException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (DivideByZeroException ex) when(i == 5)
+            {
+                Console.WriteLine("Divide by zero");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                //throw;
+            }
+            finally
+            {
+                Console.WriteLine("Finish");
+                Console.ReadLine();
+            }*/
+            /////////////////////////////////////////////////////////////////////////
+
+            /*
+            User user = new User("Tom", 31);
+            //user.name = "Tom";
+            //user.age = 22;
+            user.Info();
+
+            Console.ReadKey();*/
+            //////////////////////////////////////////////////////////////////////////
+
+            //State state1 = new State();
+            //Country country1 = new Country();
+
+            //Console.WriteLine(decimal.Round(987654321.129M, 2, MidpointRounding.ToEven));
+            //Console.WriteLine(decimal.Round(987654321.129M, 2, MidpointRounding.AwayFromZero));
+            //Console.WriteLine(decimal.Round(987654321.129M, 2, MidpointRounding.ToNegativeInfinity));
+            //Console.WriteLine(decimal.Round(987654321.129M, 2, MidpointRounding.ToPositiveInfinity));
+            //Console.WriteLine(decimal.Round(987654321.129M, 2, MidpointRounding.ToZero));
+            //////////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////////
+
+            //string filepath = @"C:\Users\Fuad\Desktop\MyPkg.docx";
+
+            //AddTable(filepath, new string[,] { 
+            //    { "Texas", "TX" },
+            //    { "California", "CA" },
+            //    { "New York", "NY" },
+            //    { "Massachusetts", "MA" }});
+
+            //CreateWordprocessingDocument(filepath);
+            //BuildDocument(filepath, new List<string>(new string[] { "Hello", "world" }));
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            var builder = new HostBuilder();
+            await builder.RunConsoleAsync();
         }
+
+
     }
 }
